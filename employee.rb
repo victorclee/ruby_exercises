@@ -54,6 +54,17 @@ class Employee
   end
 end 
 
+
+class Manager < Employee
+  def send_report
+    puts "Sending email..."
+    #the code to send report
+    puts "Email sent"
+  end
+end 
+
+
+
 employee_1 = Employee.new(
                           first_name: "Jim", 
                           last_name: "Jefferies", 
@@ -84,8 +95,18 @@ puts employee_2.print_info
 
 
 
+manager = Manager.new(
+                      first_name: "Patton",
+                      last_name: "Oswalt",
+                      salary: 100000,
+                      active: true
+                      )
 
-
+employee_1.print_info
+employee_2.print_info
+manager.print_info
+manager.send_report
+employee_1.send_report
 
 
 
