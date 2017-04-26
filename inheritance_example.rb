@@ -30,9 +30,13 @@ class Bike < Vehicle
 end
 
 car = Car.new
+bike = Bike.new
+
 puts car.accelerate
 puts car.honk_horn
 
-bike = Bike.new
+
 puts bike.accelerate
-puts bike.ring_bell
+bike.ring_bell
+
+
